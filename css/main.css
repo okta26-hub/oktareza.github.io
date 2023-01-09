@@ -61,16 +61,19 @@ body .coba3 h1{
 .btn-join .btn-danger{
     background: #007bb6 !important;
     border-color: #000 !important;
+    padding: 10px 10px !important;
 }
 
 .btn-join .btn-primary{
     background: blue !important;
     border-color: black !important;
+    padding: 10px 10px !important;
 }
 
 .btn-join .btn-info {
     background: #b9a483 !important;
     border-color: black !important;
+    padding: 10px 10px !important;
 }
 .btn-join .fa-instagram a{
 	background: black !important;
@@ -710,10 +713,3 @@ a#scrollUp i{
     border: 0 !important;
 
 }
-
-
-
-
-
-
-
