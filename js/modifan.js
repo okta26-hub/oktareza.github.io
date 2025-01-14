@@ -79,7 +79,7 @@ function adjustGapHeight() {
 
     if (window.innerWidth <= 480) {
       // Untuk perangkat kecil (mobile)
-      gapElement.style.height = `${viewportHeight * 0.2}px`;
+      gapElement.style.height = `${viewportHeight * 0.4}px`;
     } else if (window.innerWidth <= 768) {
       // Untuk tablet
       gapElement.style.height = `${viewportHeight * 0.1}px`;
@@ -91,11 +91,6 @@ function adjustGapHeight() {
     console.log(`Gap height set to: ${gapElement.style.height}`);
   }
 }
-
-// Event Listener: Panggil fungsi saat halaman dimuat atau ukuran layar berubah
-window.addEventListener('resize', adjustGapHeight);
-window.addEventListener('load', adjustGapHeight);
-
 
 // Event Listener: Panggil fungsi saat halaman dimuat atau ukuran layar berubah
 window.addEventListener('resize', adjustGapHeight);
