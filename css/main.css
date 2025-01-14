@@ -772,8 +772,6 @@ a#scrollUp i{
     position: relative;
 }
 
-
-
 /* Titik pada ujung cabang */
 .career-node.left .content::before,
 .career-node.right .content::before {
@@ -807,28 +805,9 @@ a#scrollUp i{
     margin-top: 50px; /* Ubah nilainya sesuai kebutuhan */
 }
 
-
-/* Menambahkan gap kosong */
 .gap {
-  height: 200px; /* Default height untuk layar besar */
-  background-color: white; /* Membuat gap terlihat dengan latar belakang putih */
-}
-
-/* Default gap untuk layar besar */
-.gap {
-  height: 150px; /* Default untuk layar besar */
-}
-
-/* Untuk layar tablet (lebar <= 768px) */
-@media (max-width: 768px) {
-  .gap {
-    height: calc(7vh); /* Menyesuaikan gap dengan tinggi viewport */
-  }
-}
-
-/* Untuk layar smartphone (lebar <= 480px) */
-@media (max-width: 480px) {
-  .gap {
-    height: calc(7vh); /* Mengurangi gap lebih jauh untuk smartphone */
-  }
+  width: 100%;
+  height: auto; /* Atur default menjadi otomatis */
+  margin: 0;
+  padding: 0;
 }
