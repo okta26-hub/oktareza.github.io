@@ -822,14 +822,14 @@ a#scrollUp i{
 /* Untuk perangkat kecil dengan orientasi portrait */
 @media (max-width: 768px) and (orientation: portrait) {
   .gap {
-    height: 10vh; /* Tinggi yang lebih proporsional untuk tablet/smartphone portrait */
+    height: 6vh; /* Tinggi yang lebih proporsional untuk tablet/smartphone portrait */
   }
 }
 
 /* Untuk perangkat kecil dengan orientasi landscape */
 @media (max-width: 768px) and (orientation: landscape) {
   .gap {
-    height: 7vh; /* Tinggi lebih kecil untuk iPhone landscape */
+    height: 6vh; /* Tinggi lebih kecil untuk iPhone landscape */
   }
 }
 
