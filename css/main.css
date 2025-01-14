@@ -713,3 +713,117 @@ a#scrollUp i{
     border: 0 !important;
 
 }
+
+/* Story My Career*/
+
+.story-career {
+    padding: 50px 0; /* Jarak atas dan bawah */
+    background-color: #f0f0f0;
+}
+
+.story-career h2 {
+    margin-bottom: 30px; /* Jarak bawah judul "Story My Career" */
+    text-align: center; /* Memastikan judul berada di tengah */
+}
+
+.career-tree {
+    margin-top: 30px; /* Jarak atas elemen career-tree */
+    position: relative; /* Memungkinkan posisi relatif untuk garis tengah */
+}
+
+/* Garis Tengah Vertikal */
+.career-tree::before {
+    content: '';
+    position: absolute;
+    top: 50px; /* Dari atas */
+    bottom: 0;
+    left: 50%; /* Posisi di tengah */
+    transform: translateX(-50%); /* Mengarahkan ke tengah */
+    width: 2px; /* Lebar garis */
+    background-color: #000; /* Warna garis hitam */
+    z-index: 0; /* Agar berada di belakang kotak */
+}
+
+/* Node yang menyambung dengan garis tengah */
+.career-node {
+    position: relative;
+    margin-bottom: 40px;
+    z-index: 1; /* Agar kotak tetap di atas garis */
+}
+
+/* Menjaga posisi kiri dan kanan untuk setiap node */
+.career-node.left {
+    text-align: left;
+    padding-right: 50px;
+}
+
+.career-node.right {
+    text-align: right;
+    padding-left: 50px;
+}
+
+/* Konten node */
+.career-node .content {
+    display: inline-block;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 15px 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+
+
+/* Titik pada ujung cabang */
+.career-node.left .content::before,
+.career-node.right .content::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    background: #ffc047;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.career-node.left .content::before {
+    right: -12px; /* Titik di ujung kiri */
+}
+
+.career-node.right .content::before {
+    left: -12px; /* Titik di ujung kanan */
+}
+
+
+
+#contact {
+    margin-bottom: 50px; /* Ubah nilainya sesuai kebutuhan */
+}
+
+/* Menambahkan margin atas pada div kedua */
+#story-career {
+    margin-top: 50px; /* Ubah nilainya sesuai kebutuhan */
+}
+
+
+/* Menambahkan gap kosong */
+.gap {
+  height: 150px; /* Default height untuk layar besar */
+  background-color: white; /* Membuat gap terlihat dengan latar belakang putih */
+}
+
+/* Menyesuaikan gap untuk perangkat dengan lebar layar kecil (mobile) */
+@media (max-width: 768px) {
+  .gap {
+    height: 50px; /* Ubah nilainya sesuai dengan gap yang diinginkan untuk mobile */
+  }
+}
+
+/* Menyesuaikan gap untuk perangkat dengan lebar layar lebih kecil dari 480px (smartphone) */
+@media (max-width: 480px) {
+  .gap {
+    height: 50px; /* Ubah nilainya sesuai dengan gap yang diinginkan untuk smartphone */
+  }
+}
