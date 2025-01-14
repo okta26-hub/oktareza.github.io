@@ -63,3 +63,8 @@ $(document).ready(function() {
   // Update the age in the content
   $('#age').text(age);
 });
+
+window.addEventListener('resize', () => {
+  console.log(`Viewport Width: ${window.innerWidth}px`);
+  console.log(`Viewport Height: ${window.innerHeight}px`);
+});
