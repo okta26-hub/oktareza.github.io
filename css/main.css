@@ -829,7 +829,7 @@ a#scrollUp i{
 /* Untuk perangkat kecil dengan orientasi landscape */
 @media (max-width: 768px) and (orientation: landscape) {
   .gap {
-    height: 6vh; /* Tinggi lebih kecil untuk iPhone landscape */
+    height: 4vh; /* Tinggi lebih kecil untuk iPhone landscape */
   }
 }
 
