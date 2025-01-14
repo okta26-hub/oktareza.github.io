@@ -810,22 +810,33 @@ a#scrollUp i{
 
 /* Menambahkan gap kosong */
 .gap {
-  height: 200px; /* Default height untuk layar besar */
+  height: 200px; /* Default untuk layar besar */
   background-color: white; /* Membuat gap terlihat dengan latar belakang putih */
 }
 
+/* Default untuk layar besar */
 .gap {
   height: 150px; /* Default untuk layar besar */
 }
 
-@media (max-width: 768px) {
+/* Untuk perangkat kecil dengan orientasi portrait */
+@media (max-width: 768px) and (orientation: portrait) {
   .gap {
-    height: 10vh; /* Sebagai fallback untuk tablet */
+    height: 10vh; /* Tinggi yang lebih proporsional untuk tablet/smartphone portrait */
   }
 }
 
-@media (max-width: 480px) {
+/* Untuk perangkat kecil dengan orientasi landscape */
+@media (max-width: 768px) and (orientation: landscape) {
   .gap {
-    height: 14vh; /* Sebagai fallback untuk smartphone */
+    height: 7vh; /* Tinggi lebih kecil untuk iPhone landscape */
   }
 }
+
+/* Untuk perangkat sangat kecil (iPhone) */
+@media (max-width: 480px) and (orientation: landscape) {
+  .gap {
+    height: 6vh; /* Optimal untuk smartphone landscape */
+  }
+}
+
