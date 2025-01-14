@@ -63,35 +63,3 @@ $(document).ready(function() {
   // Update the age in the content
   $('#age').text(age);
 });
-
-
-// Fungsi untuk menyesuaikan tinggi elemen gap
-function adjustGapHeight() {
-  const gapElement = document.querySelector('.gap');
-
-  if (gapElement) {
-    // Ambil tinggi viewport dengan fallback
-    const viewportHeight = window.visualViewport
-      ? window.visualViewport.height
-      : document.documentElement.clientHeight;
-
-    console.log(`Viewport Height: ${viewportHeight}px`);
-
-    if (window.innerWidth <= 480) {
-      // Untuk perangkat kecil (mobile)
-      gapElement.style.height = `${viewportHeight * 0.4}px`;
-    } else if (window.innerWidth <= 768) {
-      // Untuk tablet
-      gapElement.style.height = `${viewportHeight * 0.1}px`;
-    } else {
-      // Untuk layar besar
-      gapElement.style.height = '150px';
-    }
-
-    console.log(`Gap height set to: ${gapElement.style.height}`);
-  }
-}
-
-// Event Listener: Panggil fungsi saat halaman dimuat atau ukuran layar berubah
-window.addEventListener('resize', adjustGapHeight);
-window.addEventListener('load', adjustGapHeight);
