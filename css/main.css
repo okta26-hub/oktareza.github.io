@@ -826,6 +826,6 @@ a#scrollUp i{
 
 @media (max-width: 480px) {
   .gap {
-    height: 5vh; /* Sebagai fallback untuk smartphone */
+    height: 10vh; /* Sebagai fallback untuk smartphone */
   }
 }
