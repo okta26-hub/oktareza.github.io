@@ -64,15 +64,34 @@ $(document).ready(function() {
   $('#age').text(age);
 });
 
-  // JavaScript untuk mengubah tinggi gap saat ukuran layar berubah
-  $(window).on('resize', function() {
-    const gapElement = $('.gap');
-    
-    if ($(window).width() <= 480) {
-      gapElement.css('height', '70px'); // Ubah untuk smartphone
-    } else if ($(window).width() <= 768) {
-      gapElement.css('height', '50px'); // Ubah untuk tablet
+
+// Fungsi untuk menyesuaikan tinggi elemen gap
+function adjustGapHeight() {
+  const gapElement = document.querySelector('.gap');
+
+  if (gapElement) {
+    // Ambil tinggi viewport dengan fallback
+    const viewportHeight = window.visualViewport
+      ? window.visualViewport.height
+      : document.documentElement.clientHeight;
+
+    console.log(`Viewport Height: ${viewportHeight}px`);
+
+    if (window.innerWidth <= 480) {
+      // Untuk perangkat kecil (mobile)
+      gapElement.style.height = `${viewportHeight * 0.01}px`;
+    } else if (window.innerWidth <= 768) {
+      // Untuk tablet
+      gapElement.style.height = `${viewportHeight * 0.1}px`;
     } else {
-      gapElement.css('height', '50px'); // Ubah untuk layar besar
+      // Untuk layar besar
+      gapElement.style.height = '150px';
     }
-  }).trigger('resize'); // Trigger resize event saat halaman pertama kali dimuat
+
+    console.log(`Gap height set to: ${gapElement.style.height}`);
+  }
+}
+
+// Event Listener: Panggil fungsi saat halaman dimuat atau ukuran layar berubah
+window.addEventListener('resize', adjustGapHeight);
+window.addEventListener('load', adjustGapHeight);
