@@ -880,6 +880,6 @@ a#scrollUp i{
 /* Untuk layar smartphone (lebar <= 480px) */
 @media (max-width: 480px) {
   .gap {
-    height: 10px; /* Mengurangi tinggi gap lebih jauh untuk smartphone */
+    height: 50px; /* Mengurangi tinggi gap lebih jauh untuk smartphone */
   }
 }
