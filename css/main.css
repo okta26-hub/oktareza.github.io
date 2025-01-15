@@ -807,28 +807,79 @@ a#scrollUp i{
     margin-top: 50px; /* Ubah nilainya sesuai kebutuhan */
 }
 
-/* Menambahkan gap kosong */
-.gap {
-  height: 200px; /* Default height untuk layar besar */
-  background-color: white; /* Membuat gap terlihat dengan latar belakang putih */
+
+/* Menjaga agar .joinus tidak mengubah posisi elemen Follow Me */
+.joinus {
+  margin-top: 0 !important;
+  background: #333333 !important;
+  color: white !important;
+  margin-bottom: 10% !important;
+  padding: 2rem 0; /* Menambahkan padding untuk memberikan jarak pada bagian atas dan bawah */
+  text-align: left; /* Memastikan teks "Follow Me" tidak terpusat */
 }
 
-/* Default gap untuk layar besar */
+/* Perbaikan tata letak pada .col-xs-12 dan elemen teks untuk perangkat mobile */
+.joinus .col-xs-12 {
+  text-align: left; /* Menjaga agar elemen tidak terpusat */
+}
+
+/* Menyusun tombol lebih rapi pada perangkat mobile */
+@media (max-width: 768px) {
+  .joinus .col-xs-12 {
+    text-align: center; /* Menyusun teks di tengah pada perangkat kecil */
+  }
+
+  .btn-join {
+    display: flex;
+    justify-content: center; /* Menyusun tombol di tengah */
+    gap: 10px; /* Memberikan jarak antar tombol */
+  }
+
+  .btn-join .btn-sm {
+    padding: 8px 16px !important; /* Mengatur padding tombol agar tidak terlalu besar */
+  }
+}
+
+/* Mengatur posisi tombol ketika tampilan lebih kecil */
+.btn-join a {
+  margin: 5px; /* Menambahkan margin untuk menghindari tombol terlalu rapat */
+}
+
+.ourportfolio .header-title h2 {
+  font-weight: bold !important;
+  text-align: center;
+}
+
+.ourportfolio .header-title p {
+  text-align: center;
+}
+
+.ourportfolio {
+  padding-top: 5px;
+  padding-bottom: 90px;
+  background-position: 100%;
+}
+
+.ourportfolio .header-title {
+  margin-top: none;
+}
+
+/* Menambahkan gap kosong yang responsif */
 .gap {
-  height: 150px; /* Default untuk layar besar */
+  height: 150px; /* Default height untuk layar besar */
+  background-color: white; /* Gap terlihat dengan latar belakang putih */
 }
 
 /* Untuk layar tablet (lebar <= 768px) */
 @media (max-width: 768px) {
   .gap {
-    height: calc(10vh); /* Menyesuaikan gap dengan tinggi viewport */
+    height: 50px; /* Mengurangi tinggi gap untuk tablet */
   }
 }
 
 /* Untuk layar smartphone (lebar <= 480px) */
 @media (max-width: 480px) {
   .gap {
-    height: calc(7vh); /* Mengurangi gap lebih jauh untuk smartphone */
+    height: 10px; /* Mengurangi tinggi gap lebih jauh untuk smartphone */
   }
 }
-
