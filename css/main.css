@@ -796,6 +796,34 @@ a#scrollUp i{
     left: -12px; /* Titik di ujung kanan */
 }
 
+/* Menambahkan logo ke dalam node karier */
+.career-node img {
+    width: 80px; /* Ukuran default logo */
+    height: auto; /* Menjaga rasio aspek */
+    margin-bottom: 10px; /* Jarak antara logo dan konten */
+    border-radius: 5px; /* Membuat sudut membulat */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi hover */
+}
+
+.career-node img:hover {
+    transform: scale(1.1); /* Efek perbesaran */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan saat hover */
+}
+
+/* Responsivitas untuk ukuran layar lebih kecil */
+@media (max-width: 768px) {
+    .career-node img {
+        width: 60px; /* Ukuran logo lebih kecil untuk layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .career-node img {
+        width: 50px; /* Ukuran logo lebih kecil untuk ponsel */
+    }
+}
+
+
 
 
 #contact {
@@ -880,6 +908,6 @@ a#scrollUp i{
 /* Untuk layar smartphone (lebar <= 480px) */
 @media (max-width: 480px) {
   .gap {
-    height: 40px; /* Mengurangi tinggi gap lebih jauh untuk smartphone */
+    height: 50px; /* Mengurangi tinggi gap lebih jauh untuk smartphone */
   }
 }
